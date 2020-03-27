@@ -1,4 +1,5 @@
 language: python
 scripts:
   - python -m test.test_program
+  - pyinstaller --onefile app.py
   - python deploy.py
