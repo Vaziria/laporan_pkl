@@ -1,8 +1,4 @@
 language: python
 scripts:
   - python -m test.test_program
-
-deploy:
-  - provider:  script
-  - script:
-    - python deploy.py
+  - python deploy.py
