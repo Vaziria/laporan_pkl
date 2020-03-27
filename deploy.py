@@ -6,6 +6,6 @@ gauth.LocalWebserverAuth()
 
 drive = GoogleDrive(gauth)
 
-file1 = drive.CreateFile({'parents': [{'id': '1Vxdx6T9_w4bEtvse8aLDL_FIMhqf6XCV'}], 'title': 'test.zip'})
+file1 = drive.CreateFile({'parents': [{'id': '1Vxdx6T9_w4bEtvse8aLDL_FIMhqf6XCV'}], 'title': 'app.exe'})
 file1.SetContentFile('dist/app.exe')
 file1.Upload()
