@@ -1,2 +1,4 @@
 PyDrive
 pyinstaller
+pyyaml
+pytest

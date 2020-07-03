@@ -10,6 +10,6 @@ install:
 
 
 scripts:
-  - python -m test.test_program
+  - pytest test/
   - pyinstaller --onefile app.py
   - python deploy.py
