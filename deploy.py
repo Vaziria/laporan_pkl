@@ -13,12 +13,14 @@ logger = Logger(__name__)
 def get_version():
 	# git describe --tags
 	label = subprocess.check_output(["git", "describe", "--tags"]).strip()
+	label = label.decode('utf8')
+	label = label.split('-')[0]
 	return label
 
 def run():
-	version = str(get_version())
+	version = get_version()
 	appname = _config.get('appname').format(version=version)
-	
+
 	gauth = GoogleAuth()
 	gauth.LocalWebserverAuth()
 
@@ -33,6 +35,6 @@ def run():
 if __name__ == '__main__':
 
 	version = get_version()
-	logger.info('uploading {}'.format(str(version)))
+	logger.info('uploading {}'.format(version))
 
-	run()
+	# run()
