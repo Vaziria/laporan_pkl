@@ -37,4 +37,4 @@ if __name__ == '__main__':
 	version = get_version()
 	logger.info('uploading {}'.format(version))
 
-	# run()
+	run()
